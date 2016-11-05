@@ -1,8 +1,6 @@
-####handy-dandy CSS snippet
+#####handy-dandy CSS snippet
 
-#####adaptive css styles:
-
-####Info
+#####Info
 ```javascript
 
 ["http://www.mydevice.io/"]
@@ -30,7 +28,7 @@
 [ 1.7%  - 2560 x 1440 ]
 ```
 
-####CSS [0]:
+#####CSS [0]:
 ```css
 /* <= 360px */
 @media only screen and (max-width: 360px){}
@@ -89,8 +87,13 @@
 
 ```
 
-####CSS [1]:
+#####CSS [1]:
 ```css
+
+@media not|only mediatype and (media feature) {
+    // ...
+}
+
 @media only screen 
 
     and (min-width: 481px)
@@ -125,32 +128,73 @@
 ```
 
 
-####HTML [0]:
+#####HTML [0]:
 ```html
-
-<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="stl.css">
 
 <link rel="stylesheet" media="all and (min-color-index: 256)" href="stl.css" />
 <link rel="stylesheet" media="media screen and (min-aspect-ratio: 1/1)" href="stl.css" />
-
 <link rel="stylesheet" media="media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10)" href=""/>
 
 ```
 
+#####Media Types:
 ```
-Value      : Description
----------- : ----------- 
-all        : Used for all media type devices
-aural      : Deprecated. Used for speech and sound synthesizers
-braille    : Deprecated. Used for braille tactile feedback devices
-embossed   : Deprecated. Used for paged braille printers
-handheld   : Deprecated. Used for small or handheld devices
-print      : Used for printers
-projection : Deprecated. Used for projected presentations, like slides
-screen     : Used for computer screens, tablets, smart-phones etc.
-speech     : Used for screenreaders that "reads" the page out loud
-tty        : Deprecated. Used for media using a fixed-pitch character grid, like teletypes and terminals
-tv         : Deprecated. Used for television-type devices
+<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="stl.css">
+
+Value                   : Description
+----------------------- : ----------- 
+all                     : Used for all media type devices
+aural                   : Deprecated. Used for speech and sound synthesizers
+braille                 : Deprecated. Used for braille tactile feedback devices
+embossed                : Deprecated. Used for paged braille printers
+handheld                : Deprecated. Used for small or handheld devices
+print                   : Used for printers
+projection              : Deprecated. Used for projected presentations, like slides
+screen                  : Used for computer screens, tablets, smart-phones etc.
+speech                  : Used for screenreaders that "reads" the page out loud
+tty                     : Deprecated. Used for media using a fixed-pitch character grid, like teletypes and terminals
+tv                      : Deprecated. Used for television-type devices
 
 ```
 
+####Media Features:
+```
+Value                   : Description
+----------------------- : ----------- 
+aspect-ratio            : The ratio between the width and the height of the viewport
+color                   : The number of bits per color component for the output device
+color-index             : The number of colors the device can display
+device-aspect-ratio     : The ratio between the width and the height of the device
+device-height           : The height of the device, such as a computer screen
+device-width            : The width of the device, such as a computer screen
+grid                    : Whether the device is a grid or bitmap
+height                  : The viewport height
+max-aspect-ratio        : The maximum ratio between the width and the height of the display area
+max-color               : The maximum number of bits per color component for the output device
+max-color-index         : The maximum number of colors the device can display
+max-device-aspect-ratio : The maximum ratio between the width and the height of the device
+max-device-height       : The maximum height of the device, such as a computer screen
+max-device-width        : The maximum width of the device, such as a computer screen
+max-height              : The maximum height of the display area, such as a browser window
+max-monochrome          : The maximum number of bits per "color" on a monochrome (greyscale) device
+max-resolution          : The maximum resolution of the device, using dpi or dpcm
+max-width               : The maximum width of the display area, such as a browser window
+min-aspect-ratio        : The minimum ratio between the width and the height of the display area
+min-color               : The minimum number of bits per color component for the output device
+min-color-index         : The minimum number of colors the device can display
+min-device-aspect-ratio : The minimum ratio between the width and the height of the device
+min-device-width        : The minimum width of the device, such as a computer screen
+min-device-height       : The minimum height of the device, such as a computer screen
+min-height              : The minimum height of the display area, such as a browser window
+min-monochrome          : The minimum number of bits per "color" on a monochrome (greyscale) device
+min-resolution          : The minimum resolution of the device, using dpi or dpcm
+min-width               : The minimum width of the display area, such as a browser window
+monochrome              : The number of bits per "color" on a monochrome (greyscale) device
+orientation             : The orientation of the viewport (landscape or portrait mode)
+overflow-block          : How does the output device handle content that overflows the viewport along the block axis (added in Media Queries Level 4)
+overflow-inline         : Can content that overflows the viewport along the inline axis be scrolled (added in Media Queries Level 4)
+resolution              : The resolution of the output device, using dpi or dpcm
+scan                    : The scanning process of the output device
+update-frequency        : How quickly can the output device modify the appearance of the content (added in Media Queries Level 4)
+width                   : The viewport width
+```
