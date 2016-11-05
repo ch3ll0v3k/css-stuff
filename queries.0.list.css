@@ -1,10 +1,8 @@
 /* [http://www.mydevice.io/] */
 
-/* ============================================================================================== */
 /*
 [4:3 aspect ratio resolutions]:
-    640×480, 800×600, 960×720, 1024×768, 1280×960, 1400×1050, 
-    1440×1080, 1600×1200, 1856×1392, 1920×1440, 2048×1536.
+    640×480, 800×600, 960×720, 1024×768, 1280×960, 1400×1050, 1440×1080, 1600×1200, 1856×1392, 1920×1440, 2048×1536.
 
 [16:10 aspect ratio resolutions]:
     1280×800, 1440×900, 1680×1050, 1920×1200, 2560×1600.
@@ -14,52 +12,6 @@
 
 */
 
-
-/* <= 360px */
-@media only screen and (max-width: 360px) and (orientation : landscape){}
-@media only screen and (max-width: 360px) and (orientation : portrait){}
-
-/* 361px - 480px */
-@media only screen and (min-width: 361px) and (max-width: 480px) and (orientation : landscape){}
-@media only screen and (min-width: 361px) and (max-width: 480px) and (orientation : portrait){}
-
-/* 481px - 640px */
-@media only screen and (min-width: 481px) and (max-width: 640px) and (orientation : landscape){}
-@media only screen and (min-width: 481px) and (max-width: 640px) and (orientation : portrait){}
-
-/* 641px - 768px */ /* [ 13.4% - 768  x 1024 ] */
-@media only screen and (min-width: 641px) and (max-width: 768px) and (orientation : landscape){}
-@media only screen and (min-width: 641px) and (max-width: 768px) and (orientation : portrait){}
-
-/* 769px - 1024px */ /* [ 3.2%  - 1024 x 768  ] */
-@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation : landscape){}
-@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation : portrait){}
-
-/* 1025px - 1280px */
-@media only screen and (min-width: 1025px) and (max-width: 1280px) and (orientation : landscape){}
-@media only screen and (min-width: 1025px) and (max-width: 1280px) and (orientation : portrait){}
-
-/* 1281px - 1440px */ /* [ 23.2% - 1366 x 768  ] */ /* [ 6.3%  - 1440 x 900  ] */
-@media only screen and (min-width: 1281px) and (max-width: 1440px) and (orientation : landscape){}
-@media only screen and (min-width: 1281px) and (max-width: 1440px) and (orientation : portrait){}
-
-/* 1441px - 1680px */ /* [ 3.6%  - 1600 x 900  ] */ /* [ 2.7%  - 1680 x 1050 ] */
-@media only screen and (min-width: 1441px) and (max-width: 1680px) and (orientation : landscape){}
-@media only screen and (min-width: 1441px) and (max-width: 1680px) and (orientation : portrait){}
-
-/* 1681px - 1920px */ /* [ 14.5% - 1920 x 1080 ] */
-@media only screen and (min-width: 1681px) and (max-width: 1920px) and (orientation : landscape){}
-@media only screen and (min-width: 1681px) and (max-width: 1920px) and (orientation : portrait){}
-
-/* 1921px - 2560px */ /* [ 1.7%  - 2560 x 1440 ] */
-@media only screen and (min-width: 1921px) and (max-width: 2560px) and (orientation : landscape){}
-@media only screen and (min-width: 1921px) and (max-width: 2560px) and (orientation : portrait){}
-
-/* 2561px >> */ /* 4k - 8k - 16k ?? */
-@media only screen and (min-width: 2561px) and (orientation : landscape){}
-@media only screen and (min-width: 2561px) and (orientation : portrait){}
-
-/* -------------------------------------------------------------- */
 /* [ 23.2% - 1366 x 768  ] */
 /* [ 20.2% - ** OTHER ** ] */
 /* [ 14.5% - 1920 x 1080 ] */
@@ -70,6 +22,61 @@
 /* [ 3.2%  - 1024 x 768  ] */
 /* [ 2.7%  - 1680 x 1050 ] */
 /* [ 1.7%  - 2560 x 1440 ] */
+
+/* <= 360px */
+@media only screen and (max-width: 360px){}
+@media only screen and (max-width: 360px) and (orientation : landscape){}
+@media only screen and (max-width: 360px) and (orientation : portrait){}
+
+/* 361px - 480px */
+@media only screen and (min-width: 361px) and (max-width: 480px) {}
+@media only screen and (min-width: 361px) and (max-width: 480px) and (orientation : landscape){}
+@media only screen and (min-width: 361px) and (max-width: 480px) and (orientation : portrait){}
+
+/* 481px - 640px */
+@media only screen and (min-width: 481px) and (max-width: 640px) {}
+@media only screen and (min-width: 481px) and (max-width: 640px) and (orientation : landscape){}
+@media only screen and (min-width: 481px) and (max-width: 640px) and (orientation : portrait){}
+
+/* 641px - 768px */ /* [ 13.4% - 768  x 1024 ] */
+@media only screen and (min-width: 641px) and (max-width: 768px) {}
+@media only screen and (min-width: 641px) and (max-width: 768px) and (orientation : landscape){}
+@media only screen and (min-width: 641px) and (max-width: 768px) and (orientation : portrait){}
+
+/* 769px - 1024px */ /* [ 3.2%  - 1024 x 768  ] */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation : landscape){}
+@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation : portrait){}
+
+/* 1025px - 1280px */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) and (orientation : landscape){}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) and (orientation : portrait){}
+
+/* 1281px - 1440px */ /* [ 23.2% - 1366 x 768  ] */ /* [ 6.3%  - 1440 x 900  ] */
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {}
+@media only screen and (min-width: 1281px) and (max-width: 1440px) and (orientation : landscape){}
+@media only screen and (min-width: 1281px) and (max-width: 1440px) and (orientation : portrait){}
+
+/* 1441px - 1680px */ /* [ 3.6%  - 1600 x 900  ] */ /* [ 2.7%  - 1680 x 1050 ] */
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {}
+@media only screen and (min-width: 1441px) and (max-width: 1680px) and (orientation : landscape){}
+@media only screen and (min-width: 1441px) and (max-width: 1680px) and (orientation : portrait){}
+
+/* 1681px - 1920px */ /* [ 14.5% - 1920 x 1080 ] */
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {}
+@media only screen and (min-width: 1681px) and (max-width: 1920px) and (orientation : landscape){}
+@media only screen and (min-width: 1681px) and (max-width: 1920px) and (orientation : portrait){}
+
+/* 1921px - 2560px */ /* [ 1.7%  - 2560 x 1440 ] */
+@media only screen and (min-width: 1921px) and (max-width: 2560px) {}
+@media only screen and (min-width: 1921px) and (max-width: 2560px) and (orientation : landscape){}
+@media only screen and (min-width: 1921px) and (max-width: 2560px) and (orientation : portrait){}
+
+/* 2561px >> */ /* 4k - 8k - 16k ?? */
+@media only screen and (min-width: 2561px) {}
+@media only screen and (min-width: 2561px) and (orientation : landscape){}
+@media only screen and (min-width: 2561px) and (orientation : portrait){}
 
 /* ============================================================================================== */
 /*
