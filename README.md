@@ -95,8 +95,13 @@
 
     and (min-width: 481px)
     and (max-width: 640px)
-
     and (orientation : landscape)
+    
+    and (min-color-index: 256)
+    
+    and (min-aspect-ratio: 1/1)
+    and (device-aspect-ratio: 16/9)
+    and (device-aspect-ratio: 16/10)
 
     and ( -webkit-min-device-pixel-ratio: 1.5)
     and ( -moz-min-device-pixel-ratio: 1.5)
@@ -107,7 +112,6 @@
     and ( -moz-device-pixel-ratio: 3/2 )
     and ( -o-device-pixel-ratio: 3/2 )
     and ( device-pixel-ratio: 3/2 )
-
 
 
 {
@@ -124,7 +128,12 @@
 ####HTML [0]:
 ```html
 
-<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
+<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="stl.css">
+
+<link rel="stylesheet" media="all and (min-color-index: 256)" href="stl.css" />
+<link rel="stylesheet" media="media screen and (min-aspect-ratio: 1/1)" href="stl.css" />
+
+<link rel="stylesheet" media="media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10)" href=""/>
 
 ```
 
