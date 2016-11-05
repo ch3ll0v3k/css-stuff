@@ -128,21 +128,20 @@
 
 ```
 
+```
+Value      : Description
+---------- : ----------- 
+all        : Used for all media type devices
+aural      : Deprecated. Used for speech and sound synthesizers
+braille    : Deprecated. Used for braille tactile feedback devices
+embossed   : Deprecated. Used for paged braille printers
+handheld   : Deprecated. Used for small or handheld devices
+print      : Used for printers
+projection : Deprecated. Used for projected presentations, like slides
+screen     : Used for computer screens, tablets, smart-phones etc.
+speech     : Used for screenreaders that "reads" the page out loud
+tty        : Deprecated. Used for media using a fixed-pitch character grid, like teletypes and terminals
+tv         : Deprecated. Used for television-type devices
 
-| Value | Description |
-| ---- | ---- |
-
-| all | Used for all media type devices |
-| aural | Deprecated. Used for speech and sound synthesizers |
-| braille | Deprecated. Used for braille tactile feedback devices |
-| embossed | Deprecated. Used for paged braille printers |
-| handheld | Deprecated. Used for small or handheld devices |
-| print | Used for printers |
-| projection | Deprecated. Used for projected presentations, like slides |
-| screen | Used for computer screens, tablets, smart-phones etc. |
-| speech | Used for screenreaders that "reads" the page out loud |
-| tty | Deprecated. Used for media using a fixed-pitch character grid, like teletypes and terminals |
-| tv | Deprecated. Used for television-type devices |
-| ---- | ---- |
-
+```
 
