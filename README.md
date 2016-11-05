@@ -143,5 +143,6 @@
 | speech | Used for screenreaders that "reads" the page out loud |
 | tty | Deprecated. Used for media using a fixed-pitch character grid, like teletypes and terminals |
 | tv | Deprecated. Used for television-type devices |
+| ---- | ---- |
 
 
