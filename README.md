@@ -18,8 +18,8 @@
     1024×576, 1152×648, 1280×720, 1366×768, 1600×900, 1920×1080, 2560×1440, 3840×2160
 
 
-[ 23.2% - '1366' x '768'  ]
-[ 20.2% - "** OTHER **" ]
+[ 23.2% - 1366 x 768  ]
+[ 20.2% - ** OTHER ** ]
 [ 14.5% - 1920 x 1080 ]
 [ 13.4% - 768  x 1024 ]
 [ 7.6%  - 1028 x 800  ]
@@ -30,7 +30,7 @@
 [ 1.7%  - 2560 x 1440 ]
 ```
 
-####CSS:
+####CSS [0]:
 ```css
 /* <= 360px */
 @media only screen and (max-width: 360px){}
@@ -88,4 +88,58 @@
 @media only screen and (min-width: 2561px) and (orientation : portrait){}
 
 ```
+
+####CSS [1]:
+```css
+@media only screen 
+
+    and (min-width: 481px)
+    and (max-width: 640px)
+
+    and (orientation : landscape)
+
+    and ( -webkit-min-device-pixel-ratio: 1.5)
+    and ( -moz-min-device-pixel-ratio: 1.5)
+    and ( -o-min-device-pixel-ratio: 1.5)
+    and ( min-device-pixel-ratio: 1.5)
+
+    and ( -webkit-device-pixel-ratio: 3/2 )
+    and ( -moz-device-pixel-ratio: 3/2 )
+    and ( -o-device-pixel-ratio: 3/2 )
+    and ( device-pixel-ratio: 3/2 )
+
+
+
+{
+
+    // ...
+    // ...
+    // ...
+
+}
+
+```
+
+
+####HTML [0]:
+```html
+
+<link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
+
+```
+
+
+- * : Value => Description
+- * : all => Used for all media type devices
+- * : aural => Deprecated. Used for speech and sound synthesizers
+- * : braille => Deprecated. Used for braille tactile feedback devices
+- * : embossed => Deprecated. Used for paged braille printers
+- * : handheld => Deprecated. Used for small or handheld devices
+- * : print => Used for printers
+- * : projection => Deprecated. Used for projected presentations, like slides
+- * : screen => Used for computer screens, tablets, smart-phones etc.
+- * : speech => Used for screenreaders that "reads" the page out loud
+- * : tty => Deprecated. Used for media using a fixed-pitch character grid, like teletypes and terminals
+- * : tv => Deprecated. Used for television-type devices
+
 
