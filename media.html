@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <title>Page-Title</title>
+    <meta charset="utf-8"/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    
+    <script type="text/javascript">
+        // https://github.com/ch3ll0v3k/css-stuff
+        
+        function byId(id){ return document.getElementById(id); }
+
+        var width_height_display;
+
+        window.addEventListener('load', function(){
+
+
+            width_height_display = byId('js-width-height');
+
+            window.addEventListener('resize', function(event){
+                //console.log( event.target.outerWidth+' / '+event.target.outerHeight );
+                //console.log( event.target.innerWidth+' / '+event.target.innerHeight );
+                
+                width_height_display.innerHTML = '['+event.target.innerWidth+' / '+event.target.innerHeight+']';
+            });
+
+
+
+
+            console.log('inited ...');
+
+        });
+
+        /*
+        [4:3 aspect ratio resolutions]:
+            640×480, 800×600, 960×720, 1024×768, 1280×960, 1400×1050, 
+            1440×1080, 1600×1200, 1856×1392, 1920×1440, 2048×1536.
+
+        [16:10 aspect ratio resolutions]:
+            1280×800, 1440×900, 1680×1050, 1920×1200, 2560×1600.
+
+        [16:9 aspect ratio resolutions]:
+            1024×576, 1152×648, 1280×720, 1366×768, 1600×900, 1920×1080, 2560×1440, 3840×2160.
+
+        */
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<!-- ========================================================== -->
+<body>
+<div id="test-div"> <span id="js-width-height">[]</span> </div>
+
+<div id="main-wrapper">
+    
+    <div id="main-wrapper-header">
+
+        <div id="main-wrapper-header-menu-horizontal-wrapper">
+            <div class="main-wrapper-header-menu-horizontal-item">Menu item 0</div>
+            <div class="main-wrapper-header-menu-horizontal-item">Menu item 1</div>
+            <div class="main-wrapper-header-menu-horizontal-item">Menu item 2</div>
+            <div class="main-wrapper-header-menu-horizontal-item">Menu item 3</div>
+            <div class="main-wrapper-header-menu-horizontal-item">Menu item 4</div>
+            <div class="main-wrapper-header-menu-horizontal-item">Menu item 5</div>
+            
+        </div>
+
+        <div id="main-wrapper-header-menu-vertical-wrapper">
+            <div id="main-wrapper-header-menu-vertical-icon-label">Navigation</div>
+            <div id="main-wrapper-header-menu-vertical-icon"></div>
+            <div id="main-wrapper-header-menu-content-box">
+                <div class="main-wrapper-header-menu-vertical-item">Menu item 0</div>
+                <div class="main-wrapper-header-menu-vertical-item">Menu item 1</div>
+                <div class="main-wrapper-header-menu-vertical-item">Menu item 2</div>
+                <div class="main-wrapper-header-menu-vertical-item">Menu item 3</div>
+                <div class="main-wrapper-header-menu-vertical-item">Menu item 4</div>
+                <div class="main-wrapper-header-menu-vertical-item">Menu item 5</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="main-wrapper-body">
+
+        <!-- ::::::::::::::::::::::: -->
+        <div class="main-body-block-box">
+            <div class="main-body-block-title">Lorem ipsum</div>
+            <div class="main-body-block-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+            <div class="main-body-block-footer">footer</div>            
+        </div>
+
+        <!-- ::::::::::::::::::::::: -->
+        <div class="main-body-block-box">
+            <div class="main-body-block-title">Lorem ipsum</div>
+            <div class="main-body-block-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+            <div class="main-body-block-footer">footer</div>            
+        </div>
+
+        <!-- ::::::::::::::::::::::: -->
+        <div class="main-body-block-box">
+            <div class="main-body-block-title">Lorem ipsum</div>
+            <div class="main-body-block-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+            <div class="main-body-block-footer">footer</div>            
+        </div>
+
+        <!-- ::::::::::::::::::::::: -->
+        <div class="main-body-block-box">
+            <div class="main-body-block-title">Lorem ipsum</div>
+            <div class="main-body-block-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+            <div class="main-body-block-footer">footer</div>            
+        </div>
+
+        <!-- ::::::::::::::::::::::: -->
+        <div class="main-body-block-box">
+            <div class="main-body-block-title">Lorem ipsum</div>
+            <div class="main-body-block-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+            <div class="main-body-block-footer">footer</div>            
+        </div>
+
+        <!-- ::::::::::::::::::::::: -->
+        <div class="main-body-block-box">
+            <div class="main-body-block-title">Lorem ipsum</div>
+            <div class="main-body-block-body"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</div>
+            <div class="main-body-block-footer">footer</div>            
+        </div>
+
+        <!-- ::::::::::::::::::::::: -->
+
+    </div>
+
+    <div id="main-wrapper-footer">
+        footer        
+    </div>
+
+</div>
+
+</body>
+<!-- ========================================================== -->
+</html>
