@@ -8,31 +8,55 @@
     
     <script type="text/javascript">
         // https://github.com/ch3ll0v3k/css-stuff
-        
         function byId(id){ return document.getElementById(id); }
         function randInt(min, max){ return Math.floor(Math.random() * (max - min + 1)) + min;  }
-
 
         var width_height_display;
 
         window.addEventListener('load', function(){
-
-
+ 
             width_height_display = byId('js-width-height');
+            width_height_display.innerHTML = 'ggg';
 
             window.addEventListener('resize', function(event){
-                //console.log( event.target.outerWidth+' / '+event.target.outerHeight );
-                //console.log( event.target.innerWidth+' / '+event.target.innerHeight );
-                
                 width_height_display.innerHTML = '['+event.target.innerWidth+' / '+event.target.innerHeight+']';
             });
 
-
-
-
+            createPseudoContent();
             console.log('inited ...');
 
         });
+
+        function createPseudoContent(){
+ 
+            var elem = byId('main-wrapper-body');
+            elem.innerHTML = '';
+            
+            var tpl = '';
+                tpl += '<div class="main-body-block-box{{TYPE}}">';
+                tpl += '    <div class="main-body-block-title">Lorem ipsum</div>';
+                tpl += '    <div class="main-body-block-body">';
+                tpl += '        <img src="images/nat-{{IMG_ID}}.png" class="float_{{FLOAT_SIDE}}">';
+                tpl += '        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo';
+                tpl += '    </div>';
+                tpl += '    <div class="main-body-block-footer"> <a class="main-body-block-footer-link" href="#">Read more</a> </div>';
+                tpl += '</div>';
+
+            for(var i=0; i<6; i++){
+
+                if( i%2 == 0 ){
+                    elem.innerHTML += tpl.replace('{{TYPE}}', '-wide').replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
+                    elem.innerHTML += tpl.replace('{{TYPE}}', '').replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
+
+                } else{
+                    elem.innerHTML += tpl.replace('{{TYPE}}', '').replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
+                    elem.innerHTML += tpl.replace('{{TYPE}}', '-wide').replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
+
+                }
+            }
+
+        }
+
 
         /*
         [4:3 aspect ratio resolutions]:
@@ -69,12 +93,12 @@
     <div id="main-wrapper-header">
 
         <div id="main-wrapper-header-menu-horizontal-wrapper">
-            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Menu item 0</div></a>
-            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Menu item 1</div></a>
-            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Menu item 2</div></a>
-            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Menu item 3</div></a>
-            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Menu item 4</div></a>
-            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Menu item 5</div></a>
+            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Lorem ipsum</div></a>
+            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Excepteur sint</div></a>
+            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Ipsum dolor</div></a>
+            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Minim veniam</div></a>
+            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Occaecat cupidatat</div></a>
+            <a href="#"><div class="main-wrapper-header-menu-horizontal-item">Sint ipsum</div></a>
             
         </div>
 
@@ -82,76 +106,86 @@
             <div id="main-wrapper-header-menu-vertical-icon-label">Navigation</div>
             <div id="main-wrapper-header-menu-vertical-icon"></div>
             <div id="main-wrapper-header-menu-content-box">
-                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Menu item 0</div></a>
-                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Menu item 1</div></a>
-                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Menu item 2</div></a>
-                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Menu item 3</div></a>
-                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Menu item 4</div></a>
-                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Menu item 5</div></a>
+                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Lorem ipsum</div></a>
+                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Excepteur sint</div></a>
+                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Ipsum dolor</div></a>
+                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Minim veniam</div></a>
+                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Occaecat cupidatat</div></a>
+                <a href="#"><div class="main-wrapper-header-menu-vertical-item">Sint ipsum</div></a>
             </div>
         </div>
 
     </div>
 
 
-    <script type="text/javascript">
-        window.addEventListener('load', function(){
-
-            var elem = byId('main-wrapper-body');
-            elem.innerHTML = '';
-
-            var tpl_small = `
-                <div class="main-body-block-box">
-                    <div class="main-body-block-title">Lorem ipsum</div>
-                    <div class="main-body-block-body"> 
-                        <img src="images/nat-{{IMG_ID}}.png" class="float_{{FLOAT_SIDE}}">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    </div>
-                    <div class="main-body-block-footer"> <a class="main-body-block-footer-link" href="#">Read more</a> </div>
-                </div>
-            `;
-
-            var tpl_wide = `
-                <div class="main-body-block-box-wide">
-                    <div class="main-body-block-title">Lorem ipsum</div>
-                    <div class="main-body-block-body"> 
-                        <img src="images/nat-{{IMG_ID}}.png" class="float_{{FLOAT_SIDE}}">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    </div>
-                    <div class="main-body-block-footer"> <a class="main-body-block-footer-link" href="#">Read more</a> </div>
-                </div>
-            `;
-
-            for(var i=0; i<6; i++){
-
-                //elem.innerHTML += tpl_small.replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
-                
-                /**/
-                if( i%2 == 0 ){
-                    elem.innerHTML += tpl_wide.replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
-                    elem.innerHTML += tpl_small.replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
-
-                } else{
-                    elem.innerHTML += tpl_small.replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
-                    elem.innerHTML += tpl_wide.replace('{{IMG_ID}}', randInt(0, 8)).replace('{{FLOAT_SIDE}}', (randInt(0, 1) == 1 ? 'l' : 'r'));
-
-                }
-                /**/
-            }
-
-
-        });
-
-    </script>
-
     <div id="main-wrapper-body">
         <!-- ::::::::::::::::::::::: -->
+
+        <span style="color:black">[JS-INFLATE]</span>
 
         <!-- ::::::::::::::::::::::: -->
     </div>
 
     <div id="main-wrapper-footer">
-        footer        
+
+        <div class="main-wrapper-footer-block-item-wrapper">
+            <div class="main-wrapper-footer-block-title">Lorem ipsum</div>
+            <a href="#"><div class="main-wrapper-footer-block-item">Officia deserunt</div></a>        
+            <a href="#"><div class="main-wrapper-footer-block-item">Excepteur sint</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ipsum dolor</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Occaecat cupidatat</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ullamco laboris</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Laboris nisi</div></a>
+        </div>
+
+        <div class="main-wrapper-footer-block-item-wrapper">
+            <div class="main-wrapper-footer-block-title">Excepteur sint</div>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ipsum dolor</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Minim veniam</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Occaecat cupidatat</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ullamco laboris</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Officia deserunt</div></a>        
+        </div>
+
+        <div class="main-wrapper-footer-block-item-wrapper">
+            <div class="main-wrapper-footer-block-title">Ipsum dolor</div>
+            <a href="#"><div class="main-wrapper-footer-block-item">Laboris nisi</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Excepteur sint</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Officia deserunt</div></a>        
+            <a href="#"><div class="main-wrapper-footer-block-item">Ipsum dolor</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Minim veniam</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Occaecat cupidatat</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ullamco laboris</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Excepteur sint</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Officia deserunt</div></a>        
+        </div>
+
+        <div class="main-wrapper-footer-block-item-wrapper">
+            <div class="main-wrapper-footer-block-title">Minim veniam</div>
+            <a href="#"><div class="main-wrapper-footer-block-item">Laboris nisi</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Excepteur sint</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ipsum dolor</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Minim veniam</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Occaecat cupidatat</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Officia deserunt</div></a>        
+        </div>
+
+        <div class="main-wrapper-footer-block-item-wrapper">
+            <div class="main-wrapper-footer-block-title">Occaecat cupidatat</div>
+            <a href="#"><div class="main-wrapper-footer-block-item">Officia deserunt</div></a>        
+            <a href="#"><div class="main-wrapper-footer-block-item">Laboris nisi</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Minim veniam</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Excepteur sint</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ipsum dolor</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Occaecat cupidatat</div></a>
+            <a href="#"><div class="main-wrapper-footer-block-item">Ullamco laboris</div></a>
+        </div>
+
+    </div>
+
+
+    <div id="main-wrapper-after-footer">
+        &copy; Site.com | 2016
     </div>
 
 </div>
