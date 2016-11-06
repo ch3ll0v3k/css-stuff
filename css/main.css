@@ -116,11 +116,12 @@ html,body{
 
     .main-body-block-box{  width: 31% !important; }
     .main-body-block-box .main-body-block-body{ background: #0F8; min-height: 340px; }
-    .main-body-block-box .main-body-block-body img{ float: none !important; width: 90% !important; }
+    .main-body-block-box .main-body-block-body img{ width: 65% !important; }
  
-    .main-body-block-box-wide{  width: 62% !important; }
+    .main-body-block-box-wide{  width: 31% !important; }
     .main-body-block-box-wide .main-body-block-body{ background: #F0F; min-height: 340px; }
-    .main-body-block-box-wide .main-body-block-body img{ width: 55% !important; }
+    .main-body-block-box-wide .main-body-block-body img{ width: 45% !important; }
+ 
 
     #main-wrapper-header-menu-horizontal-wrapper{ display: block; }
     #main-wrapper-header-menu-vertical-wrapper{ display: none; }
